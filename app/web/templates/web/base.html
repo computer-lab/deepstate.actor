@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Deep State - {{ page_title }}</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Deep State - a Slack bot" />
+    <meta property="og:title" content="Deep State - {{ page_title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="{% static 'favicon.ico' %}" />
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="{% static 'deepstate.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    <ul>
+      <li><a href="/">Deep State</a></li>
+      <li><a href="/privacy">Privacy</a></li>
+      <li><a href="/support">Support</a></li>
+    </ul>
+    <div>
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

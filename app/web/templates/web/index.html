@@ -1,0 +1,27 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+  <p>
+    <b>Deep State</b> is a Slack bot for the age of surveillance.
+  </p>
+  <ol>
+    <li>
+      Add the <b>Deep State</b> application to your team
+      <div>
+        <a href="https://slack.com/oauth/authorize?scope=bot&client_id={{client_id}}&redirect_uri={{redirect_uri}}"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
+      </div>
+    </li>
+    <li>
+      Invite the <b>deepstate</b> bot to your channels
+      <div>
+        <img src="{% static 'invite.png' %}" />
+      </div>
+    </li>
+    <li>
+      The <b>deepstate</b> bot will redact &amp; repost deleted messages in those channels
+      <div>
+        <img src="{% static 'censor.png' %}" />
+      </div>
+    </li>
+  </ol>
+{% endblock %}
